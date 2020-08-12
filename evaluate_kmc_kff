@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Running KMC for file $1 and k-mer length $2, saving to file $3..."
+./kmc -k$2 -fm $1 $3 .
+KMC_SUM=$(du -ch $3.kmc_*)
+echo "$KMC_SUM"
+echo "Converting to KFF..."
+./kmc_dump $3 kmc_temp.txt
+C++/build/kmc_to_kff $2 kmc_temp.txt $3.kff
+echo "KFF written."
+KFF_SUM=$(du -ch $3.kff)
+echo "$KFF_SUM"

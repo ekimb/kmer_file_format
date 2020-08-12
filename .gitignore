@@ -6,5 +6,10 @@ Makefile
 *.bak
 
 kff_example
-test.kff
+*.kff
 kff_io.hpp
+*.fq.gz
+*.fa
+*.kmc_*
+settings.json
+*.txt

@@ -11,3 +11,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # add the executable
 add_executable(kff_example main.cpp kff_io.cpp)
+add_executable(kmc_to_kff kff_io.cpp kmc_to_kff.cpp)
